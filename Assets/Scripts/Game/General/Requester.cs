@@ -18,9 +18,9 @@ public class Requester
         EMPTY
     }
     //Screen width
-    public int width;
+    public float width;
     //Screen height
-    public int height;
+    public float height;
 
     #region SOCKET
     private string gameUrl;
@@ -55,8 +55,8 @@ public class Requester
         bot0 = PlayerPrefs.GetString("bot0");
         bot1 = PlayerPrefs.GetString("bot1");
 
-        width = 1000;
-        height = 500;
+        width = Data.Resolution.x;
+        height = Data.Resolution.y;
 
         converter = GameObject.Find("Converter").GetComponent<Converter>();
     }

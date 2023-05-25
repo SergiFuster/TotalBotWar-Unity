@@ -173,10 +173,18 @@ public class StateManager : MonoBehaviour
 
     private void InitialPositioningSetup()
     {
+        SetPositioningCameraPosition();
         minSpriteWidth = requester.width / 20;
         AddGeneral();
         CreateRectangle(requester.width, requester.height/2);
         state = STATE.POSITIONING;
+    }
+    
+    void SetPositioningCameraPosition()
+    {
+        VirtualCamera.m_Lens.OrthographicSize = requester.height / 2.5f;
+        Vector3 cameraPos = new Vector3(requester.width / 2, requester.height / 4, VirtualCamera.transform.position.z);
+        VirtualCamera.transform.position = cameraPos;
     }
 
     public void StartGameButtonPressed()

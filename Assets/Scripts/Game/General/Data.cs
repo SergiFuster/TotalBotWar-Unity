@@ -15,6 +15,7 @@ public static class Data
     public static Dictionary<int, GameObject> TeamUnits0 = new Dictionary<int, GameObject>();
     public static Dictionary<int, GameObject> TeamUnits1 = new Dictionary<int, GameObject>();
     public static Queue<Vector2> Touches = new Queue<Vector2>();
+    public static Vector2 Resolution = new Vector2(1000, 500);
     
     public static void AddSquadTeam0(int id, GameObject squad)
     {
